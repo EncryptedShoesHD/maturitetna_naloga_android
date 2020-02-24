@@ -8,7 +8,9 @@ import android.view.View;
 import android.widget.Button;
 
 public class Main2Activity extends AppCompatActivity {
+
     Button buttonOnline, buttonOffline;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -26,7 +28,7 @@ public class Main2Activity extends AppCompatActivity {
         buttonOnline.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), Main4Activity.class );
+                Intent intent = new Intent(getApplicationContext(), FirstPageActivity.class );
                 startActivity(intent);
             }
         });
