@@ -4,4 +4,5 @@
     <string name="textPrijava">Prijava</string>
     <string name="hintGeslo">Geslo</string>
     <string name="hintUporabniskoIme">Uporabniško ime</string>
+    <string name="textViewUstvariNovRacun">Ustvari nov račun</string>
 </resources>
