@@ -4,14 +4,24 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Context;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class FirstPageActivity extends AppCompatActivity {
 
+    protected boolean isNetworkAvailable() {
+        ConnectivityManager connectivityManager
+                = (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo activeNetworkInfo = connectivityManager.getActiveNetworkInfo();
+        return activeNetworkInfo != null && activeNetworkInfo.isConnected();
+    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,10 +43,18 @@ public class FirstPageActivity extends AppCompatActivity {
                     selectedFragment = new HomeFragment();
                     break;
                 case R.id.nav_redovalnica:
-                    selectedFragment = new RedovalnicaFragment();
+                    if(isNetworkAvailable()){
+                        selectedFragment = new RedovalnicaFragment();
+                    }
+                    else selectedFragment = new HomeFragment();
+                    Toast.makeText(FirstPageActivity.this, "Check your connection", Toast.LENGTH_LONG).show();
                     break;
                 case R.id.nav_refresh:
-                    selectedFragment = new ObnoviFragment();
+                    if(isNetworkAvailable()) {
+                        selectedFragment = new ObnoviFragment();
+                    }
+                    else selectedFragment = new HomeFragment();
+                    Toast.makeText(FirstPageActivity.this, "Check your connection", Toast.LENGTH_LONG).show();
                     break;
 
             }
