@@ -8,6 +8,7 @@ import android.content.Context;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.MenuItem;
 import android.widget.Toast;
 
@@ -34,6 +35,8 @@ public class FirstPageActivity extends AppCompatActivity {
     }
 
     private BottomNavigationView.OnNavigationItemSelectedListener navListener = new BottomNavigationView.OnNavigationItemSelectedListener() {
+
+
         @Override
         public boolean onNavigationItemSelected(@NonNull MenuItem item) {
             Fragment selectedFragment = null;
@@ -46,15 +49,22 @@ public class FirstPageActivity extends AppCompatActivity {
                     if(isNetworkAvailable()){
                         selectedFragment = new RedovalnicaFragment();
                     }
-                    else selectedFragment = new HomeFragment();
-                    Toast.makeText(FirstPageActivity.this, "Check your connection", Toast.LENGTH_LONG).show();
+                    else {selectedFragment = new HomeFragment();
+                    Toast toast = Toast.makeText(FirstPageActivity.this, "Check your connection", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                     }
                     break;
                 case R.id.nav_refresh:
                     if(isNetworkAvailable()) {
                         selectedFragment = new ObnoviFragment();
                     }
-                    else selectedFragment = new HomeFragment();
-                    Toast.makeText(FirstPageActivity.this, "Check your connection", Toast.LENGTH_LONG).show();
+                    else {selectedFragment = new HomeFragment();
+                    Toast toast = Toast.makeText(FirstPageActivity.this, "Check your connection", Toast.LENGTH_SHORT);
+                    toast.setGravity(Gravity.CENTER, 0, 0);
+                    toast.show();
+                    }
+
                     break;
 
             }

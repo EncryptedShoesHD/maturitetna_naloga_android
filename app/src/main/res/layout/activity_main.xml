@@ -91,10 +91,11 @@
         android:layout_width="132dp"
         android:layout_height="50dp"
         android:background="#363696"
+        android:onClick="OnLogin"
         android:text="@string/buttonLogin"
         android:textColor="@android:color/white"
-        android:textSize="20sp"
 
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

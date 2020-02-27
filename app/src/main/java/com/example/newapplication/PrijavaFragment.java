@@ -26,12 +26,12 @@ public class PrijavaFragment extends Fragment {
         TextView ustvariNovRacun;
         Button button;
 
-            ustvariNovRacun = view.findViewById(R.id.textViewUstvariNovRacun);
+        ustvariNovRacun = view.findViewById(R.id.textViewUstvariNovRacun);
             button = view.findViewById(R.id.buttonLogin);
-
             button.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
+
                     Intent intent = new Intent(getActivity(), Main2Activity.class );
                     startActivity(intent);
                 }
