@@ -1,9 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
-    <item
-        android:id="@+id/nav_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="Domov"/>
 
     <item
         android:id="@+id/nav_Onas"
@@ -13,6 +9,16 @@
     <item
         android:id="@+id/nav_Kontakt"
         android:icon="@drawable/ic_contact_mail_black_24dp"
-        android:title="nav_Kontakt"/>
+        android:title="Kontakt"/>
+
+    <item
+        android:id="@+id/nav_Registracija"
+        android:icon="@drawable/ic_person_register_24dp"
+        android:title="Registracija"/>
+    <item
+        android:id="@+id/nav_Prijava"
+        android:icon="@drawable/ic_person_login_24dp"
+        android:title="Pijava"/>
+
 
 </menu>
