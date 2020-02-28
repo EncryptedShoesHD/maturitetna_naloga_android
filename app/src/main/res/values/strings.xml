@@ -5,4 +5,11 @@
     <string name="hintGeslo">Geslo</string>
     <string name="hintUporabniskoIme">Uporabniško ime</string>
     <string name="textViewUstvariNovRacun">Ustvari nov račun</string>
+    <string name="kontaktirajte_nas">Kontaktirajte nas</string>
+    <string name="textviewNaslov">Naslov:</string>
+    <string name="textViewTelefon">Telefon:</string>
+    <string name="textViewEmail">E-mail:</string>
+    <string name="pot_na_lavo_22_celje">Pot na Lavo 22, Celje</string>
+    <string name="_03_428_58_00_centrala">(03) 428 58 00 – centrala</string>
+    <string name="info_sc_celje_si">info@sc-celje.si</string>
 </resources>
