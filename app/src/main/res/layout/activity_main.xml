@@ -92,7 +92,7 @@
         android:layout_height="50dp"
         android:background="#363696"
         android:onClick="OnLogin"
-        android:text="@string/buttonLogin"
+        android:text="@string/textPrijava"
         android:textColor="@android:color/white"
 
         android:textSize="20sp"
