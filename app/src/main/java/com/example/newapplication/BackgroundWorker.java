@@ -21,6 +21,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
 
     Context context;
     AlertDialog alertDialog;
+    public boolean login = false;
 
     BackgroundWorker (Context ctx){
         context = ctx;
@@ -31,7 +32,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
         String username = voids[1];
         String password = voids[2];
 
-        String login_url = "http://192.168.64.121/login.php";
+        String login_url = "http://192.168.64.121/connect.php";
         if(type.equals("login")){
             try {
                 URL url = new URL(login_url);
