@@ -55,7 +55,10 @@ public class FirstPageActivity extends AppCompatActivity {
                     toast.show();
                      }
                     break;
-                case R.id.nav_refresh:
+                case R.id.nav_urnik:
+                    selectedFragment = new UrnikFragment();
+                    break;
+                case R.id.nav_obvestila:
                     if(isNetworkAvailable()) {
                         selectedFragment = new ObnoviFragment();
                     }
