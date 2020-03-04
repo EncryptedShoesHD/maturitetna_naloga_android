@@ -32,7 +32,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
         String username = voids[1];
         String password = voids[2];
 
-        String login_url = "http://192.168.64.121/connect.php";
+        String login_url = "http://192.168.64.116/connect.php";
         if(type.equals("login")){
             try {
                 URL url = new URL(login_url);
@@ -73,6 +73,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     protected void onPreExecute() {
         alertDialog = new AlertDialog.Builder(context).create();
         alertDialog.setTitle("Login status");
+        alertDialog.setMessage("Something went wrong");
 
     }
 
@@ -88,4 +89,6 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
     protected void onProgressUpdate(Void... values) {
         super.onProgressUpdate(values);
     }
+
+
 }
