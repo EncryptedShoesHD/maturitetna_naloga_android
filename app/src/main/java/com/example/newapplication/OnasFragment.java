@@ -16,7 +16,7 @@ public class OnasFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_onas,container, false);
 
-        Button btnOpen = (Button) view. findViewById(R.id.button);
+        Button btnOpen = (Button)view.findViewById(R.id.buttonLogin);
 
         return view;
     }

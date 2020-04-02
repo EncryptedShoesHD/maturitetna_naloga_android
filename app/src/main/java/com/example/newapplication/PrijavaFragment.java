@@ -34,7 +34,7 @@ public class PrijavaFragment extends Fragment {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String username = passwordEitText.getText().toString();
+                String username = usernameEditText.getText().toString();
                 String password = passwordEitText.getText().toString();
                 String type = "login";
                 BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
