@@ -1,7 +1,9 @@
 package com.example.newapplication;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
@@ -21,6 +23,7 @@ public class PrijavaFragment extends Fragment {
     @Nullable
     Button button;
     EditText usernameEditText, passwordEitText;
+    Session session;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_prijava, container, false);
@@ -38,9 +41,11 @@ public class PrijavaFragment extends Fragment {
                 String password = passwordEitText.getText().toString();
                 String type = "login";
                 BackgroundWorker backgroundWorker = new BackgroundWorker(getActivity());
-                backgroundWorker.execute(type,username,password);
+                backgroundWorker.execute(type, username, password);
             }
+
         });
+
         return view;
 
 

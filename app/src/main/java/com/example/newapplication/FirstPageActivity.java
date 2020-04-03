@@ -15,7 +15,7 @@ import android.widget.Toast;
 import com.google.android.material.bottomnavigation.BottomNavigationItemView;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class FirstPageActivity extends AppCompatActivity {
+public class FirstPageActivity extends AppCompatActivity{
 
     protected boolean isNetworkAvailable() {
         ConnectivityManager connectivityManager

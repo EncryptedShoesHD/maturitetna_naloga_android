@@ -1,23 +1,9 @@
 package com.example.newapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
-import android.widget.TableLayout;
-
-import org.json.JSONArray;
-import org.json.JSONException;
-import org.json.JSONObject;
-
-import java.text.Format;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -36,9 +22,9 @@ public class RedovalnicaFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_redovalnica, container, false);
-        TableLayout tableLayout = (TableLayout)view.findViewById(R.id.tableLayout);
-        /*ListView listView = (ListView)view.findViewById(R.id.listViewRedovalnica);
+        View view ;
+        /*TableLayout tableLayout = (TableLayout)view.findViewById(R.id.tableLayout);
+        ListView listView = (ListView)view.findViewById(R.id.listViewRedovalnica);
 
         ArrayAdapter <String> listViewAdapter = new ArrayAdapter<String>(
                 getActivity(),
@@ -47,7 +33,7 @@ public class RedovalnicaFragment extends Fragment {
                 );
         listView.setAdapter(listViewAdapter);*/
 
-        return view;
+        return inflater.inflate(R.layout.fragment_redovalnica_1, container, false);
     }
     public static void parseProfilesJson(String the_json){
        /* ArrayList<JSONObject> arrays = new ArrayList<JSONObject>();

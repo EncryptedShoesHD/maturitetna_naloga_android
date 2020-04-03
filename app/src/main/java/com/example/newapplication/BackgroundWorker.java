@@ -2,9 +2,11 @@ package com.example.newapplication;
 
 import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.AsyncTask;
+import android.os.Bundle;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -20,21 +22,28 @@ import java.net.URLEncoder;
 public class BackgroundWorker extends AsyncTask<String,Void,String> {
 
     Context context;
+    AlertDialog.Builder builder;
     AlertDialog alertDialog;
-    public boolean login = false;
+    private Session session;
+
 
     BackgroundWorker (Context ctx){
         context = ctx;
+        session = new Session(ctx);
     }
+
     @Override
     protected String doInBackground(String... voids) {
-        //String type = voids[0];
-        //String username = voids[1];
-        //String password = voids[2];
+        /*
+        String type = voids[0];
+        String username = voids[1];
+        String password = voids[2];
+        */
 
         String login_url = "http://redovalnica.ga/android/login.php";
         //String login_url = "http://192.168.64.116/A+_web/android/login.php";
         //String login_url = "http://redovalnica.ga/member/login.php";
+
         if(voids[0].equals("login")){
             try {
                 URL url = new URL(login_url);
@@ -53,13 +62,16 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
                 String result = "";
                 String line = "";
-                while ((line = bufferedReader.readLine()) != null){
-                    result += line;
-                }
+                while ((line = bufferedReader.readLine()) != null) result += line;
                 bufferedReader.close();
                 inputStream.close();
                 httpURLConnection.disconnect();
-                return result;
+                String check="Login successful";
+                if(result.trim().equals(check)){
+                    session.setUsername(voids[1]);
+                    session.setPassword(voids[2]);
+                    return result;
+                }else return result;
             }
             catch (MalformedURLException e){
                 e.printStackTrace();
@@ -72,21 +84,28 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
 
     @Override
     protected void onPreExecute() {
-        alertDialog = new AlertDialog.Builder(context).create();
-        alertDialog.setTitle("Login status");
-        alertDialog.setMessage("Something went wrong");
+        builder = new AlertDialog.Builder(context)
+        .setTitle("Login status")
+        .setMessage("Something went wrong");
 
     }
 
     @Override
 
     protected void onPostExecute(String results) {
-    alertDialog.setMessage(results);
-    alertDialog.show();
+        builder.setMessage(results)
+        .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int id) {
+                Intent myIntent = new Intent(context, FirstPageActivity.class);
+                context.startActivity(myIntent);
+            }
+        })
+        .show();
     }
 
 
-    @Override
+
+        @Override
     protected void onProgressUpdate(Void... values) {
         super.onProgressUpdate(values);
     }

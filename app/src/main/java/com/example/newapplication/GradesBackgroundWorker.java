@@ -73,7 +73,7 @@ public class GradesBackgroundWorker extends AsyncTask<String,Void,String> {
         alertDialog = new AlertDialog.Builder(context).create();
         alertDialog.setTitle("Login status");
         alertDialog.setMessage("Something went wrong");
-
+        alertDialog.show();
     }
 
     @Override
