@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.TableLayout;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -23,7 +24,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 public class RedovalnicaFragment extends Fragment {
-    String login_url = "http://redovalnica.ga/android/grades.php";
+    /*String login_url = "http://redovalnica.ga/android/grades.php";
     String[] gradeTable = {"SubjectID","Grade","Type","DateReceived"};
     /*String[] subjectID = {"SLO","MAT","ŠVZ"};
     Integer[] grade = {1,2,3};
@@ -36,19 +37,20 @@ public class RedovalnicaFragment extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_redovalnica, container, false);
-        ListView listView = (ListView)view.findViewById(R.id.listViewRedovalnica);
+        TableLayout tableLayout = (TableLayout)view.findViewById(R.id.tableLayout);
+        /*ListView listView = (ListView)view.findViewById(R.id.listViewRedovalnica);
 
         ArrayAdapter <String> listViewAdapter = new ArrayAdapter<String>(
                 getActivity(),
                 android.R.layout.simple_selectable_list_item,
                 gradeTable
                 );
-        listView.setAdapter(listViewAdapter);
+        listView.setAdapter(listViewAdapter);*/
 
         return view;
     }
     public static void parseProfilesJson(String the_json){
-        ArrayList<JSONObject> arrays = new ArrayList<JSONObject>();
+       /* ArrayList<JSONObject> arrays = new ArrayList<JSONObject>();
         try {
             JSONObject myjson = new JSONObject(the_json);
             JSONArray the_json_array = myjson.getJSONArray("profiles");
@@ -62,6 +64,6 @@ public class RedovalnicaFragment extends Fragment {
         }finally {
             JSONObject[] jsons = new JSONObject[arrays.size()];
             arrays.toArray(jsons);
-        }
+        }*/
     }
 }
