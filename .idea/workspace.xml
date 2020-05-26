@@ -10,20 +10,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="565aad70-1898-4fd1-91e5-be565b4a8978" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/Session.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/GetArray.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/BackgroundWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/BackgroundWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/FirstPageActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/FirstPageActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/GradesBackgroundWorker.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/GradesBackgroundWorker.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/HomeFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/HomeFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/PrijavaFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/PrijavaFragment.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/RedovalnicaFragment.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/RedovalnicaFragment.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_prijava.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_prijava.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_redovalnica.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_redovalnica_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/local.properties" beforeDir="false" afterPath="$PROJECT_DIR$/local.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/Session.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/example/newapplication/Session.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_home.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/fragment_redovalnica_1.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/fragment_redovalnica_1.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -117,7 +114,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Android App.default_launch">
+  <component name="RunManager" selected="Android App.FirstPage">
     <configuration default="true" type="AndroidJUnit" factoryName="Android JUnit">
       <option name="TEST_OBJECT" value="class" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
@@ -257,22 +254,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/com/example/newapplication/BackgroundWorker.java</url>
-          <line>48</line>
-          <option name="timeStamp" value="30" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-    <watches-manager>
-      <configuration name="default_launch">
-        <watch expression="e" />
-        <watch expression="this" />
-      </configuration>
-    </watches-manager>
   </component>
 </project>

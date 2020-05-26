@@ -7,6 +7,10 @@ import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.IOException;
@@ -23,8 +27,7 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
 
     Context context;
     AlertDialog.Builder builder;
-    AlertDialog alertDialog;
-    private Session session;
+    Session session;
 
 
     BackgroundWorker (Context ctx){
@@ -40,8 +43,11 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
         String password = voids[2];
         */
 
-        String login_url = "http://redovalnica.ga/android/login.php";
-        //String login_url = "http://192.168.64.116/A+_web/android/login.php";
+        //String login_url = "http://redovalnica.ga/android/login.php";
+        String login_url = "http://192.168.64.115/A+_web/android/login.php";
+        //String login_url = "http://redovalnica.ga/android/login.php";
+        //String getUserData_url = "http://192.168.64.115/A+_web/android/getUserData.php";
+
         //String login_url = "http://redovalnica.ga/member/login.php";
 
         if(voids[0].equals("login")){
@@ -69,7 +75,6 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
                 String check="Login successful";
                 if(result.trim().equals(check)){
                     session.setUsername(voids[1]);
-                    session.setPassword(voids[2]);
                     return result;
                 }else return result;
             }
@@ -79,7 +84,48 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
             catch (IOException e){
                 e.printStackTrace();
             }
-        }return null;
+        }
+        /*else if(voids[0].equals("getUserData")){
+            try {
+                URL url = new URL(getUserData_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String post_data = URLEncoder.encode("username", "UTF-8")+"="+URLEncoder.encode(session.getUsername(), "UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
+                String result = "";
+                String line = "";
+                while ((line = bufferedReader.readLine()) != null) result += line;
+                JSONArray jsonArray = new JSONArray(result);
+                JSONObject json = jsonArray.getJSONObject(1);
+                session.setUserId(json.getString("UserID"));
+                session.setName(json.getString("Name"));
+                session.setSurname(json.getString("Surname"));
+                session.setEmail(json.getString("Email")) ;
+                session.setUsername(json.getString("Username"));
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                session.setUsername(voids[1]);
+                return result;
+            }
+            catch (MalformedURLException e){
+                e.printStackTrace();
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }*/return null;
     }
 
     @Override
