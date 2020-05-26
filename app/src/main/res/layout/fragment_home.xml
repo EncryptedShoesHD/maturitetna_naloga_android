@@ -19,7 +19,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.124" />
 
-    <EditText
+    <TextView
 
         android:id="@+id/editTextImeInPriimek"
         android:layout_width="@id/guideline6"
@@ -65,16 +65,13 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.275" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextEpostniNaslov"
         android:layout_width="@id/guideline6"
         android:layout_height="wrap_content"
-        android:clickable="false"
         android:contextClickable="false"
-        android:cursorVisible="false"
         android:drawableLeft="@drawable/ic_email_black_24dp"
         android:ems="10"
-        android:enabled="false"
         android:inputType="textPersonName"
         android:text=""
         app:layout_constraintBottom_toBottomOf="parent"
@@ -98,7 +95,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.398" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextUporabniskoiIme"
         android:layout_width="@id/guideline6"
         android:layout_height="wrap_content"
@@ -127,7 +124,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.506" />
 
-    <EditText
+    <TextView
         android:id="@+id/editTextGeslo"
         android:layout_width="@id/guideline6"
         android:layout_height="wrap_content"
@@ -172,7 +169,7 @@
         app:layout_constraintVertical_bias="0.655" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/buttonIzbrisi"
         android:layout_width="212dp"
         android:layout_height="49dp"
         android:background="#363696"
