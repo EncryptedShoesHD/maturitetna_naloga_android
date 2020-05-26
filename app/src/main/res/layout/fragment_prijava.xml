@@ -79,6 +79,7 @@
         android:text="@string/textViewUstvariNovRacun"
         android:textAlignment="center"
         android:textSize="20sp"
+        android:textColor="#4744ff"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
