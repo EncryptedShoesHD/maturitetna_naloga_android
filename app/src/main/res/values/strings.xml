@@ -29,11 +29,4 @@
     <string name="_1_konferenca">1. KONFERENCA</string>
     <string name="_2_konfernca">2. KONFERNCA</string>
     <string name="kon_na_ocena">KONČNA OCENA</string>
-    <string name="ime">Ime</string>
-    <string name="za_ustvarjanje_novega_ra_una_izpolnite_spodnji_obrazec">Za ustvarjanje novega računa izpolnite spodnji obrazec.</string>
-    <string name="priimek">Priimek</string>
-    <string name="uporabni_ko_ime">Uporabniško ime</string>
-    <string name="e_po_tni_naslov2">E-poštni naslov</string>
-    <string name="ponovno_vnesite_geslo">Ponovno vnesite geslo</string>
-    <string name="registracija">Registracija</string>
 </resources>

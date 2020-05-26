@@ -16,7 +16,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentTransaction;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -24,7 +23,6 @@ public class PrijavaFragment extends Fragment {
     @Nullable
     Button button;
     EditText usernameEditText, passwordEitText;
-    TextView textviewNovRacun;
     Session session;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,7 +33,6 @@ public class PrijavaFragment extends Fragment {
         ustvariNovRacun = view.findViewById(R.id.textViewUstvariNovRacun);
         usernameEditText = (EditText) view.findViewById(R.id.editTextUsername1);
         passwordEitText = (EditText) view.findViewById(R.id.editTextPassword1);
-        textviewNovRacun =(TextView) view.findViewById(R.id.textViewUstvariNovRacun);
         button = view.findViewById(R.id.buttonLogin);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,19 +46,6 @@ public class PrijavaFragment extends Fragment {
 
         });
 
-
-        textviewNovRacun.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Fragment someFragment = new RegistracijaFragment();
-                FragmentTransaction transaction = getFragmentManager().beginTransaction();
-                transaction.replace(R.id.fragment_top_conatiner, someFragment ); // give your fragment container id in first parameter
-                transaction.addToBackStack(null);  // if written, this transaction will be added to backstack
-                transaction.commit();
-
-            }
-
-        });
         return view;
 
 
