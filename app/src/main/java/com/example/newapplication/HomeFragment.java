@@ -30,7 +30,7 @@ public class HomeFragment extends Fragment {
         String type = "userData";
         getArray.execute(type);
         editTextImeinPriimek = (TextView)view.findViewById(R.id.editTextImeInPriimek);
-        editTextImeinPriimek.setText(session.getName());
+        editTextImeinPriimek.setText(session.getName() + " " + session.getSurname());
         editTextEpostniNaslov = (TextView)view.findViewById(R.id.editTextEpostniNaslov);
         editTextEpostniNaslov.setText(session.getEmail());
         editTextUporabniskoiIme = (TextView)view.findViewById(R.id.editTextUporabniskoiIme);

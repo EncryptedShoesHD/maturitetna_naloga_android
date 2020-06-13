@@ -3,10 +3,13 @@ package com.example.newapplication;
 import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TableLayout;
 import android.widget.TableRow;
@@ -23,6 +26,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
+import static java.lang.Integer.max;
 import static java.lang.Integer.parseInt;
 
 public class RedovalnicaFragment extends Fragment {
@@ -43,21 +47,24 @@ public class RedovalnicaFragment extends Fragment {
     String shortCode;
     Integer grade;
     TextView shortCode_label,grade_label;
-
+    Button button;
+    TableLayout tableLayout;
+    TableRow tr_head;
 
     @Nullable
     @Override
-    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public View onCreateView(@NonNull LayoutInflater inflater, @Nullable final ViewGroup container, @Nullable final Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_redovalnica_1, container, false);
         super.onCreate(savedInstanceState);
         session = new Session(getContext());
         GetArray getArray = new GetArray(getActivity());
         String type = "grades";
         getArray.execute(type);
-        TableLayout tableLayout = (TableLayout)view.findViewById(R.id.tableLayout);
+        tableLayout = (TableLayout)view.findViewById(R.id.tableLayout);
+        button = (Button)view.findViewById(R.id.button_dodaj_oceno);
 
 
-        TableRow tr_head = new TableRow(getContext());
+        tr_head = new TableRow(getContext());
         tr_head.setId(View.generateViewId());
         tr_head.setBackgroundColor(Color.GRAY);
         tr_head.setLayoutParams(new TableLayout.LayoutParams(
@@ -93,11 +100,36 @@ public class RedovalnicaFragment extends Fragment {
         tableLayout.addView(tr_head,new TableLayout.LayoutParams(
                 TableLayout.LayoutParams.MATCH_PARENT,
                 TableLayout.LayoutParams.WRAP_CONTENT));
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                    EditText shortCodeView = new EditText(getContext());
+                    EditText gradeView = new EditText(getContext());
+                    gradeView.setFilters(new InputFilter[]{ new InputFilterMinMax("1", "5")});
 
+                    TableRow row = new TableRow(getContext());
+                    TableRow.LayoutParams lp = new TableRow.LayoutParams(TableRow.LayoutParams.WRAP_CONTENT);
+                    row.setLayoutParams(lp);
+                    shortCode = "SLO";
+                    grade = 3;
+
+                    shortCodeView.setText(shortCode);
+                    shortCodeView.setMaxLines(1);
+                    shortCodeView.setAllCaps(true);
+
+                    gradeView.setInputType(grade);
+                    gradeView.setMaxLines(1);
+
+                    row.addView(shortCodeView);
+                    row.addView(gradeView);
+                    tableLayout.addView(row,0);
+            }
+        });
         return view;
     }
-    public static void parseProfilesJson(String the_json){
-       /* ArrayList<JSONObject> arrays = new ArrayList<JSONObject>();
+
+    /*public static void parseProfilesJson(String the_json){
+       ArrayList<JSONObject> arrays = new ArrayList<JSONObject>();
         try {
             JSONObject myjson = new JSONObject(the_json);
             JSONArray the_json_array = myjson.getJSONArray("profiles");
@@ -111,6 +143,6 @@ public class RedovalnicaFragment extends Fragment {
         }finally {
             JSONObject[] jsons = new JSONObject[arrays.size()];
             arrays.toArray(jsons);
-        }*/
-    }
+        }
+    }*/
 }

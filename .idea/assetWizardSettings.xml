@@ -87,6 +87,20 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="scalingPercent" value="101" />
+                                                <entry key="trimmed" value="true" />
+                                              </map>
+                                            </option>
+                                          </PersistentState>
+                                        </value>
+                                      </entry>
+                                      <entry key="foregroundTextAsset">
+                                        <value>
+                                          <PersistentState>
+                                            <option name="values">
+                                              <map>
+                                                <entry key="fontFamily" value="Freestyle Script" />
+                                                <entry key="text" value="A+" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -96,8 +110,11 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="backgroundImage" value="C:\REDOVALNICA\Includes\pictures\received_331923897749018.png" />
+                                      <entry key="backgroundColor" value="08a3dc" />
+                                      <entry key="backgroundImage" value="C:\Users\x\AndroidStudioProjects\A+_osebna_redovalnica\android_background.jpg" />
+                                      <entry key="foregroundAssetType" value="TEXT" />
                                       <entry key="foregroundImage" value="C:\REDOVALNICA\Includes\pictures\received_331923897749018.png" />
+                                      <entry key="legacyIconShape" value="CIRCLE" />
                                       <entry key="outputName" value="ic_logo" />
                                     </map>
                                   </option>

@@ -24,8 +24,11 @@ public class GetArray extends AsyncTask<String,Void,String> {
 
     Context context;
     private Session session;
-    String userData_url = "http://192.168.64.115/A+_web/android/getUserData.php";
-    String grades_url = "http://192.168.64.115/A+_web/android/grades.php";
+
+    //String userData_url = "http://192.168.64.120/A+_web/android/getUserData.php";
+    String userData_url = "http://redovalnica.ga/android/getUserData.php";
+    //String grades_url = "http://192.168.64.120/A+_web/android/grades.php";
+    String grades_url = "http://redovalnica.ga/android/grades.php";
 
     GetArray(Context ctx){
         context = ctx;

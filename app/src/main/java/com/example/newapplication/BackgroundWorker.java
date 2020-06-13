@@ -43,9 +43,8 @@ public class BackgroundWorker extends AsyncTask<String,Void,String> {
         String password = voids[2];
         */
 
-        //String login_url = "http://redovalnica.ga/android/login.php";
-        String login_url = "http://192.168.64.115/A+_web/android/login.php";
-        //String login_url = "http://redovalnica.ga/android/login.php";
+        String login_url = "http://redovalnica.ga/android/login.php";
+        //String login_url = "http://192.168.64.120/A+_web/android/login.php";
         //String getUserData_url = "http://192.168.64.115/A+_web/android/getUserData.php";
 
         //String login_url = "http://redovalnica.ga/member/login.php";
