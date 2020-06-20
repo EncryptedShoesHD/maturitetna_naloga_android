@@ -47,10 +47,6 @@ public class RedovalnicaFragment extends Fragment {
 
     @Nullable
     @Override
-
-
-
-
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         view = inflater.inflate(R.layout.fragment_redovalnica_1, container, false);
         super.onCreate(savedInstanceState);
@@ -99,5 +95,22 @@ public class RedovalnicaFragment extends Fragment {
                 TableLayout.LayoutParams.WRAP_CONTENT));
 
         return view;
+    }
+    public static void parseProfilesJson(String the_json){
+       /* ArrayList<JSONObject> arrays = new ArrayList<JSONObject>();
+        try {
+            JSONObject myjson = new JSONObject(the_json);
+            JSONArray the_json_array = myjson.getJSONArray("profiles");
+            int size = the_json_array.length();
+            for (int i = 0; i < size; i++) {
+                JSONObject another_json_object = the_json_array.getJSONObject(i);
+                arrays.add(another_json_object);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }finally {
+            JSONObject[] jsons = new JSONObject[arrays.size()];
+            arrays.toArray(jsons);
+        }*/
     }
 }
