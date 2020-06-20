@@ -20,11 +20,11 @@
     <string name="geslo">GESLO</string>
     <string name="odjava">ODJAVA</string>
     <string name="o_nas">O nas:</string>
-    <string name="pozdravljeni_smo_dijaki_4_letnika_srednje_ole_za_kemijom_elektrotehniko_in_ra_unalni_tvo_celje_za_4_izpitno_enoto_storitev_ali_izdelek_z_zagovorom_smo_se_odlo_ila_da_naredimo_osebno_redovalnico_po_imenu_redovalnica_a_nastala_je_z_namenom_izbolj_anja_obstoje_e_redovalnice_eviweb">Pozdravljeni, smo dijaki 4. letnika Srednje šole za kemijom elektrotehniko in računalništvo Celje. Za 4. izpitno enoto - storitev ali izdelek z zagovorom smo se odločila da naredimo osebno redovalnico po imenu Redovalnica A+. Nastala je z namenom izboljšanja obstoječe redovalnice EviWeb.</string>
+    <string name="pozdravljeni_smo_dijaki_4_letnika_srednje_ole_za_kemijom_elektrotehniko_in_ra_unalni_tvo_celje_za_4_izpitno_enoto_storitev_ali_izdelek_z_zagovorom_smo_se_odlo_ila_da_naredimo_osebno_redovalnico_po_imenu_redovalnica_a_nastala_je_z_namenom_izbolj_anja_obstoje_e_redovalnice_eviweb">Pozdravljeni, smo dijaki 4. letnika Srednje šole za kemijo, elektrotehniko in računalništvo Celje. Za 4. izpitno enoto - storitev ali izdelek z zagovorom smo se odločili da naredimo osebno redovalnico po imenu Redovalnica A+. Nastala je z namenom izboljšanja obstoječe redovalnice EviWeb.</string>
     <string name="avtorji">Avtorji:</string>
     <string name="lovro_frece">- Lovro Frece</string>
     <string name="toma_bizjak">- Tomaž Bizjak</string>
-    <string name="aleksandar_grobelnik">- Aleksandar Grobelnik</string>
+    <string name="aleksandar_grobelnik">- Aleksander Grobelnik</string>
     <string name="predmet">PREDMET</string>
     <string name="_1_konferenca">1. KONFERENCA</string>
     <string name="_2_konfernca">2. KONFERNCA</string>
@@ -36,4 +36,13 @@
     <string name="e_po_tni_naslov2">E-poštni naslov</string>
     <string name="ponovno_vnesite_geslo">Ponovno vnesite geslo</string>
     <string name="registracija">Registracija</string>
+
+    <string-array name="my_header_title">
+        <item></item>
+        <item>PON</item>
+        <item>TOR</item>
+        <item>SRE</item>
+        <item>ČET</item>
+        <item>PET</item>
+    </string-array>
 </resources>
