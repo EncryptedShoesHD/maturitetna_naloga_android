@@ -33,7 +33,7 @@ public class GradesBackgroundWorker extends AsyncTask<String,Void,String> {
         //String password = voids[2];
 
         //String login_url = "http://redovalnica.ga/android/grades.php";
-        String login_url = "http://192.168.64.116/A+_web/android/grades.php";
+        String login_url = "http://192.168.64.120/A+_web/android/grades.php";
 
         if(voids[0].equals("grades")) {
             try {
