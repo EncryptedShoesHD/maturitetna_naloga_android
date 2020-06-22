@@ -8,7 +8,7 @@
 
     <com.github.tlaabs.timetableview.TimetableView
         android:id="@+id/timetable"
-        android:layout_width="411dp"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         app:column_count="6"
         app:row_count="10"

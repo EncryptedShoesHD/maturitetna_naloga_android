@@ -25,14 +25,11 @@ public class PrijavaFragment extends Fragment {
     Button button;
     EditText usernameEditText, passwordEitText;
     TextView textviewNovRacun;
-    Session session;
 
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         final View view = inflater.inflate(R.layout.fragment_prijava, container, false);
 
         super.onCreate(savedInstanceState);
-        TextView ustvariNovRacun;
-        ustvariNovRacun = view.findViewById(R.id.textViewUstvariNovRacun);
         usernameEditText = (EditText) view.findViewById(R.id.editTextUsername1);
         passwordEitText = (EditText) view.findViewById(R.id.editTextPassword1);
         textviewNovRacun =(TextView) view.findViewById(R.id.textViewUstvariNovRacun);

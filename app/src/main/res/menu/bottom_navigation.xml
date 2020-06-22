@@ -10,15 +10,5 @@
         android:icon="@drawable/ic_redovalnica_black_24dp"
         android:title="Redovalnica"/>
 
-    <item
-        android:id="@+id/nav_urnik"
-        android:icon="@drawable/ic_urnik_24dp"
-        android:title="Urnik"/>
-
-    <item
-        android:id="@+id/nav_obvestila"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="Obvestila"/>
-
 
 </menu>

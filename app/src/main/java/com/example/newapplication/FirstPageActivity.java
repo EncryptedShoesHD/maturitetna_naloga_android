@@ -56,10 +56,7 @@ public class FirstPageActivity extends AppCompatActivity{
                     toast.show();
                      }
                     break;
-                case R.id.nav_urnik:
-                    selectedFragment = new UrnikFragment();
-                    break;
-                case R.id.nav_obvestila:
+                /*case R.id.nav_obvestila:
                     if(isNetworkAvailable()) {
                         selectedFragment = new ObnoviFragment();
                     }
@@ -69,7 +66,7 @@ public class FirstPageActivity extends AppCompatActivity{
                     toast.show();
                     }
 
-                    break;
+                    break;*/
 
             }
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,selectedFragment).commit();

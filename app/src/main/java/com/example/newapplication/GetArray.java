@@ -29,6 +29,7 @@ public class GetArray extends AsyncTask<String,Void,String> {
     String userData_url = "http://redovalnica.ga/android/getUserData.php";
     //String grades_url = "http://192.168.64.120/A+_web/android/grades.php";
     String grades_url = "http://redovalnica.ga/android/grades.php";
+    String pushGrade_url = "http://redovalnica.ga/android/request_grade.php";
 
     GetArray(Context ctx){
         context = ctx;
@@ -41,7 +42,7 @@ public class GetArray extends AsyncTask<String,Void,String> {
             try {
                 URL url = new URL(userData_url);
                 HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
-                httpURLConnection.setRequestMethod("POST");
+                 httpURLConnection.setRequestMethod("POST");
                 httpURLConnection.setDoOutput(true);
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
@@ -84,7 +85,7 @@ public class GetArray extends AsyncTask<String,Void,String> {
                 httpURLConnection.setDoInput(true);
                 OutputStream outputStream = httpURLConnection.getOutputStream();
                 BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
-                String post_data = URLEncoder.encode("username", "UTF-8") + "=" + URLEncoder.encode(session.getUsername(), "UTF-8");
+                String post_data = URLEncoder.encode("userId", "UTF-8") + "=" + URLEncoder.encode(session.getUserId(), "UTF-8");
                 bufferedWriter.write(post_data);
                 bufferedWriter.flush();
                 bufferedWriter.close();
@@ -92,7 +93,7 @@ public class GetArray extends AsyncTask<String,Void,String> {
                 InputStream inputStream = httpURLConnection.getInputStream();
                 BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
                 String result = "";
-                String line = "";
+                String line;
                 while ((line = bufferedReader.readLine()) != null) result += line;
                 session.setGrades(result);
                 bufferedReader.close();
@@ -104,7 +105,36 @@ public class GetArray extends AsyncTask<String,Void,String> {
             } catch (IOException e) {
                 e.printStackTrace();
             }
+        }else if(voids[0].equals("pushGrades")){
+            try {
+                URL url = new URL(pushGrade_url);
+                HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
+                httpURLConnection.setRequestMethod("POST");
+                httpURLConnection.setDoOutput(true);
+                httpURLConnection.setDoInput(true);
+                OutputStream outputStream = httpURLConnection.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String post_data = URLEncoder.encode("userID", "UTF-8") + "=" + URLEncoder.encode(session.getUserId(), "UTF-8") + "&" + URLEncoder.encode("grade", "UTF-8") + "=" + URLEncoder.encode(voids[1], "UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpURLConnection.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream, "iso-8859-1"));
+                String result = "";
+                String line = "";
+                while ((line = bufferedReader.readLine()) != null) result += line;
+                bufferedReader.close();
+                inputStream.close();
+                httpURLConnection.disconnect();
+                return result;
+            } catch (MalformedURLException e) {
+                e.printStackTrace();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
         }
+
         return null;
     }
 }

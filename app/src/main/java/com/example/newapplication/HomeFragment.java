@@ -39,7 +39,7 @@ public class HomeFragment extends Fragment {
         buttonOdjava.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                session.onDestroy();
+                //session.destroySession();
                 Intent intent = new Intent(getContext(), MainActivity.class);
                 getContext().startActivity(intent);
             }
